@@ -1,37 +1,26 @@
 // Jeu du pendu
 
 alert ("Hangman game");
-alert ("bienvenue");
+alert ("Bienvenue dans le jeu du Pendu ");
 
 let arrayWords = ["pollution", "foret" , "arbre" ,"pesticide" , "eolienne" , "proteger","ecosysteme"] ; // tableau des mots
 
 
 let cptChoice = arrayWords [Math.floor(Math.random() * arrayWords.length)]; // choix aléatoire des mots
 let sizeWord = cptChoice.length;
-console.log(cptChoice) // cptChoise = string
+//console.log(cptChoice) // cptChoise = string
+console.log(cptChoice);
 
-alert("_ ".repeat(cptChoice.length))
-
+prompt(`Choisis une lettre et tente de découvrir le mot caché : ${"_ ".repeat(cptChoice.length)}`)
 let splitWord = cptChoice.split("");
-console.log(splitWord)
+let playerChoice = ["b","o","a","e"];
+console.log (splitWord);
 
-if (splitWord = cptChoice);
+let tape = [];
+let re = splitWord.includes(tape);
+console.log(re);
+if (splitWord.includes(tape)) ;
 
 
-//If nombre de lettre a trouver = 0, joueur gagne. Else compteur ===7, le joueur perd.
-
-
-let letter = enterLetter();
-
-for (let i = 0; i <= word.length -1; i++) {​​​​​
-
-    // console.log(word[i] + " " + letter);
-}
-    if(word[i] === letter) {​​​​​
-
-        // wordToFind[i] = letter; Ne marche pas
-
-        wordToFind = wordToFind.substring(0, i) + letter + wordToFind.substring(i+1);
-
-    }​​​​​
-
+// boucle for pour décompte ?
+//If nombre de lettre a trouver = 0, joueur gagne. Else compteur ===7, le joueur perd
