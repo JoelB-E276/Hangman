@@ -6,9 +6,9 @@ alert ("bienvenue");
 let arrayWords = ["pollution", "foret" , "arbre" ,"pesticide" , "eolienne" , "proteger","ecosysteme"] ; // tableau des mots
 
 
-let cptChoise = arrayWords [Math.floor(Math.random() * arrayWords.length)]; // choix aléatoire des mots
-let sizeWord = cptChoise.length;
-console.log(cptChoise)
+let cptChoice = arrayWords [Math.floor(Math.random() * arrayWords.length)]; // choix aléatoire des mots
+let sizeWord = cptChoice.length;
+console.log(cptChoice)
 
 
 
