@@ -8,7 +8,12 @@ let arrayWords = ["pollution", "foret" , "arbre" ,"pesticide" , "eolienne" , "pr
 
 let cptChoice = arrayWords [Math.floor(Math.random() * arrayWords.length)]; // choix aléatoire des mots
 let sizeWord = cptChoice.length;
-console.log(cptChoice)
+console.log(cptChoice) // cptChoise = string
+
+alert("_ ".repeat(cptChoice.length))
+
+let splitWord = cptChoice.split("");
+console.log(splitWord)
 
 
 
