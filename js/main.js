@@ -16,3 +16,10 @@ console.log(cptChoice + score); // Pour vérifier le mot lors de la construction
 prompt(`Choisis une lettre et tente de découvrir le mot caché : ${"_ ".repeat(cptChoice.length)}`)// Affiche des underscores à la place du nombre de lettre.
 
 //////////////////////  en cours de construction  /////////////////////
+
+function noCheatOneLetter (oneLetter){
+    while(oneLetter.length > 1) {
+        oneletter = prompt("Bah oui bien sûr !! C'est pas parce que je suis un Développeur Web Junior que tu dois commencer à tricher...Choisis une lettre merci !");
+    }
+    return oneLetter
+};
