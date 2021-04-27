@@ -13,6 +13,10 @@ let sizeWord = cptChoice.length;
 
 console.log(cptChoice + score); // Pour vérifier le mot lors de la construction du code.
 
+wordToFind = fillString("_", word.length);
+
+prompt(wordToFind);
+
 prompt(`Choisis une lettre et tente de découvrir le mot caché : ${"_ ".repeat(cptChoice.length)}`)// Affiche des underscores à la place du nombre de lettre.
 
 //////////////////////  en cours de construction  /////////////////////
