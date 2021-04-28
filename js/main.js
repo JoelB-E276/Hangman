@@ -63,17 +63,17 @@ let sizeWord = "_".repeat(cptChoice.length);
 sizeWord = sizeWord.split("");
 
 let userChoice = prompt('Choisis une lettre et tente de découvrir le mot caché :\r' + sizeWord.join(" ") + ": reste " + score + " tentative(s)")// Affiche des underscores à la place du nombre de lettre.
-let lower = userChoice.toLocaleLowerCase()
+let lower = userChoice.toLowerCase()
 
 let splitWord = cptChoice.split("");       //Word to find to array
 
-//let re = splitWord.includes(i.length); // renvoi true/false de manière aléatoire. ?
 
 console.log(splitWord);
 console.log(userChoice);
 console.log(sizeWord); // tant que contient _ ou des points
 //////////////////////  en cours de construction  /////////////////////
-while (score > 0 || sizeWord > 0) {
+while (score > 0 && sizeWord.includes("_")) {
+   console.log(sizeWord.includes("_"));
      inputCheck();
    for (i = 0; i < splitWord.length; i++) {
       var letter = splitWord[i]
@@ -91,10 +91,10 @@ while (score > 0 || sizeWord > 0) {
 }
 
  function inputCheck(){
-   userChoice.toLocaleLowerCase()
+   userChoice.toLowerCase()
       if(userChoice.length != 1){
          score++
-         alert("UNE SEULE LETTRE!")
+         alert("UNE SEULE LETTRE !")
       }
     }
 
