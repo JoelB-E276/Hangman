@@ -52,34 +52,54 @@ if (playerChoice == cptChoice.includes(0)){
 
 //////////////////////  en cours de construction  /////////////////////
 
-let tape = [];      // Choix du joueur en cours
 let score = 7;
-let penality = score - 1; 
 //alert ("Hangman game");
 //alert ("Bienvenue dans le jeu du Pendu ");
-let arrayWords = ["pollution", "foret" , "arbre" ,"pesticide" , "eolienne" , "proteger","ecosysteme"] ; // tableau des mots
-let cptChoice = arrayWords [Math.floor(Math.random() * arrayWords.length)]; // choix aléatoire des mots
-//let sizeWord = cptChoice.length;
-let sizeWord =  "_ ".repeat(cptChoice.length);
 
-console.log(cptChoice +" "+ score); // Pour vérifier le mot lors de la construction du code.
-//var userChoice = prompt(`Choisis une lettre et tente de découvrir le mot caché : ${"_ ".repeat(cptChoice.length)}`)ES6
-let userChoice = prompt('Choisis une lettre et tente de découvrir le mot caché :\r' + sizeWord)// Affiche des underscores à la place du nombre de lettre.
-let arrUserChoice = userChoice.split();  //input to array
-let splitWord = cptChoice.split();       //Word to find to array
-console.log (splitWord +" " +score); // Pour vérifier le mot lors de la construction du code.
+let arrayWords = ["pollution", "foret", "arbre", "pesticide", "eolienne", "proteger", "ecosysteme"]; // tableau des mots
+let cptChoice = arrayWords[Math.floor(Math.random() * arrayWords.length)]; // choix aléatoire des mots
+console.log(cptChoice);
+let sizeWord = "_".repeat(cptChoice.length);
+sizeWord = sizeWord.split("");
+
+let userChoice = prompt('Choisis une lettre et tente de découvrir le mot caché :\r' + sizeWord.join(" ") + ": reste " + score + " tentative(s)")// Affiche des underscores à la place du nombre de lettre.
+let lower = userChoice.toLocaleLowerCase()
+
+let splitWord = cptChoice.split("");       //Word to find to array
+
 //let re = splitWord.includes(i.length); // renvoi true/false de manière aléatoire. ?
 
 console.log(splitWord);
-console.log(arrUserChoice);
-
+console.log(userChoice);
+console.log(sizeWord); // tant que contient _ ou des points
 //////////////////////  en cours de construction  /////////////////////
-for(i=0;i<splitWord.length;i++){
- var letter = splitWord[i]
- if(letter == userChoice)
-    console.log("contient " + userChoice);    
+while (score > 0 || sizeWord > 0) {
+     inputCheck();
+   for (i = 0; i < splitWord.length; i++) {
+      var letter = splitWord[i]
+      if (letter == userChoice) {
+         console.log("contient " + userChoice);
+         sizeWord[i] = userChoice;          // replace la lettre à sa place
+      }   
+   }
+         if (letter != userChoice){
+              score--
+         }
+
+   userChoice = prompt('Choisis une lettre et tente de découvrir le mot caché :\r' + sizeWord.join(" ") + ": reste " + score + " tentative(s)")// Affiche des underscores à la place du nombre de lettre.
+
 }
-let rep = cptChoice.indexOf(userChoice)
+
+ function inputCheck(){
+   userChoice.toLocaleLowerCase()
+      if(userChoice.length != 1){
+         score++
+         alert("UNE SEULE LETTRE!")
+      }
+    }
+
+
+/* let rep = cptChoice.indexOf(userChoice)
 let indexWord = [];
 while(rep!= -1){
    indexWord.push(rep)
@@ -88,9 +108,9 @@ while(rep!= -1){
    prompt(sizeWord)
 
 }
-console.log(indexWord);
+console.log(indexWord); */
 
 
-   
+
 
 //prompt(sizeWord+ userChoice.replace(userChoice, userChoice))
