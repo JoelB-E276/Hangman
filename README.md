@@ -1,4 +1,3 @@
-##### Hangman
 ### Hangman game in javascript.
 ## Project create during my web developer teaching.
 Un jeu du pendu
@@ -9,7 +8,9 @@ Votre direction s’est donc dit qu’elle allait vous confier un second projet,
 commercialiser un jeu du pendu en navigateur. Elle vous a donc de produire un MVP (minimum
 viable product) de l’application. Pour l’instant du JavaScript suffira, il n’y a pas encore besoin
 d’interface graphique.
+
 Spécifications fonctionnelles :
+
 - Quand l’utilisateur arrive sur la page index.html le jeu démarre
 - Par défaut l’ordinateur choisit un mot au hasard dans une liste et affiche au joueur le mot à deviner
 sous forme de underscores.
