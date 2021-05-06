@@ -86,7 +86,16 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
+   body{
+   background-image: url(../img/hangman.jpg);
+  background-repeat: no-repeat;
+  background-size: 15vh;
+  background-position-x: center;
+  background-position-y: 10vh;
+   }
+   h1{
+     text-align: center;
+   }
 /* ==========================================================================
    Helper classes
    ========================================================================== */
